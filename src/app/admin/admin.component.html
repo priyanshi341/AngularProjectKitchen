@@ -1,0 +1,26 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-header" style="text-align: center;font-weight: bold;font-size: larger;">
+                    <label>Admin LogIn</label>
+                </div>
+                <div class="card-body">
+                    <form [formGroup]="adminform" (ngSubmit)="adminsubmit()">
+                        <label style="font-weight: bold;">Username</label>
+                        <input type="text" formControlName="username" class="form-control" />
+                        <br/>
+                        <label style="font-weight: bold;">Password</label>
+                        <input type="password" formControlName="adminpassword" class="form-control" />
+                        <br/>
+                        <input type="submit" value="LogIn"  class="btn btn-info"/>
+                        <br/>
+                        <span style="color: red;">{{msg}}</span>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+</div>

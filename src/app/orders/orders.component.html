@@ -1,0 +1,52 @@
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12" style="text-align: center;font-size: larger;font-weight: bold;">
+    <label>Your Selected Order</label></div>
+  </div>
+  <br/>
+
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+          <table class="table table-stripped" border="1" style="border-color: aqua;">
+          <tr>
+            <th>Product name</th>
+            <th>Product price</th>
+            
+            
+          </tr>
+          <tr *ngFor="let i of product">
+           
+            <td>{{i.productname}}</td>
+            <td>{{i.productprice}}</td>
+           
+          </tr>
+          </table>
+         
+        </div>
+        <div class="col-md-3">
+           
+        </div>
+     
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+         
+        </div>
+        <div class="col-md-4">
+            <div class="row">
+                <div class="col-md-6">
+                <label style="text-align: center;font-size: large;font-weight: bold;">Total payment:{{total}}</label>
+              
+                </div>
+                <div class="col-md-6">
+                    <input type="button" value="Place Order" (click)="onsubmit()" class="btn btn-success"/>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            
+        </div>
+    </div>
+</div>

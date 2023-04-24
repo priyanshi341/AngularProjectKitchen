@@ -1,0 +1,22 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">Add Product</div>
+                <div class="card-body">
+                    <form [formGroup]="addproductform" (ngSubmit)="addbutton()">
+                        <label>Product Name</label>
+                        <input type="text" formControlName="productname" class="form-control" />
+                        <br/>
+                        <label>Product Price</label>
+                        <input type="text" formControlName="productprice" class="form-control"/>
+                        <br/>
+                        <input type="submit" value="Submit" class="btn btn-primary"/>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+</div>

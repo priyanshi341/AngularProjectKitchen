@@ -1,0 +1,32 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-header" style="text-align: center;font-weight: bold;font-size: larger;">
+                    <label>Admin Update</label>
+                </div>
+                <div class="card-body">
+                    <form [formGroup]="adminform" (ngSubmit)="updatesubmit()">
+                        <label style="font-weight: bold;">Username</label>
+                        <input type="text" formControlName="username" class="form-control" [(ngModel)]="username"/>
+                        <span style="color: red;" *ngIf="adminform.controls.username.touched && adminform.controls.username.invalid">
+                        Please Enter the username first
+                        </span>
+                        <br/>
+                        <label style="font-weight: bold;">Password</label>
+                        <input type="text" formControlName="adminpassword" class="form-control" [(ngModel)]="password"/>
+                        <span style="color: red;" *ngIf="adminform.controls.adminpassword.touched && adminform.controls.adminpassword.invalid">
+                            Please Enter the password first
+                            </span>
+                        <br/>
+                        <input type="submit" value="Update"  class="btn btn-info"/>
+                        <br/>
+                        <span [ngClass]="class">{{msg}}</span>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+</div>

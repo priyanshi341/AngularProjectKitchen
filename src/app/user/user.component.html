@@ -1,0 +1,27 @@
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-header"><label style="font-weight:bolder;text-align: center;color: brown;font-size: larger;">User LogIn</label></div>
+                <div class="card-body">
+                    <form [formGroup]="userform" (ngSubmit)="buttonclick()">
+                        <label style="font-size: larger;">User Name</label>
+                        <input type="text" formControlName="username" class="form-control" [(ngModel)]="username"/>
+                        <span style="color: red;" *ngIf="userform.controls.username.touched && userform.controls.username.invalid">Please Enter the Username First</span>
+                        <br/>
+                        <label style="font-size: larger;">User Password</label>
+                        <input type="text" formControlName="userpassword" class="form-control" [(ngModel)]="userpassword"/>
+                        <span style="color: red;" class="errorinfo" *ngIf="userform.controls.userpassword.touched && userform.controls.userpassword.invalid">Please Enter the Password First</span>
+                        <br/>
+                        <input type="submit" value="LogIn" class="btn btn-primary"/>
+                        <br/>
+                        <span style="color: red;">{{msg}}</span>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+</div>
